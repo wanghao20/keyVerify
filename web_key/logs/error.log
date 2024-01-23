@@ -1,0 +1,41 @@
+[2023-05-27 16:12:02] [ERROR] [error] - init error:TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/AccountService.ts[0m:[93m94[0m:[93m23[0m - [91merror[0m[90m TS6133: [0m'name' is declared but its value is never read.
+
+[7m94[0m     public async info(name: string) {
+[7m  [0m [91m                      ~~~~[0m
+:ipundefined
+[2023-05-27 16:14:03] [ERROR] [error] - init error:TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/AccountService.ts[0m:[93m47[0m:[93m51[0m - [91merror[0m[90m TS6133: [0m'passWord' is declared but its value is never read.
+
+[7m47[0m     public async verifyPassword(userName: string, passWord: string, captchaCode: string, time: string) {
+[7m  [0m [91m                                                  ~~~~~~~~[0m
+:ipundefined
+[2023-05-27 16:14:16] [ERROR] [error] - init error:TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth/AuthController.ts[0m:[93m36[0m:[93m121[0m - [91merror[0m[90m TS2554: [0mExpected 3 arguments, but got 4.
+
+[7m36[0m          const obj = await this.service.verifyPassword(ctx.params.username, ctx.params.password, ctx.params.captchaCode,ctx.params.time);
+[7m  [0m [91m                                                                                                                        ~~~~~~~~~~~~~~~[0m
+:ipundefined
+[2023-05-27 16:16:20] [ERROR] [error] - jwt malformed:ip::ffff:192.168.2.12
+[2023-05-27 16:18:13] [ERROR] [error] - jwt malformed:ip::ffff:192.168.2.12
+[2023-05-27 16:19:22] [ERROR] [error] - init error:TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/AccountService.ts[0m:[93m94[0m:[93m23[0m - [91merror[0m[90m TS6133: [0m'name' is declared but its value is never read.
+
+[7m94[0m     public async info(name: string) {
+[7m  [0m [91m                      ~~~~[0m
+:ipundefined
+[2023-05-27 16:19:39] [ERROR] [error] - jwt malformed:ip::ffff:192.168.2.12
+[2023-05-27 16:21:14] [ERROR] [error] - name is not defined:ip::ffff:192.168.2.12
+[2023-05-27 16:22:02] [ERROR] [error] - init error:TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth/AuthController.ts[0m:[93m50[0m:[93m46[0m - [91merror[0m[90m TS2554: [0mExpected 0 arguments, but got 1.
+
+[7m50[0m         const user = await this.service.info(ctx.user.name);
+[7m  [0m [91m                                             ~~~~~~~~~~~~~[0m
+:ipundefined
+[2023-05-27 16:22:15] [ERROR] [error] - name is not defined:ip::ffff:192.168.2.12
+[2023-05-27 17:25:16] [ERROR] [error] - init error:TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/redisTool.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'REDIS_PASSWORD' does not exist on type 'typeof BaseConfig'.
+
+[7m112[0m     "password": BaseConfig.REDIS_PASSWORD,
+[7m   [0m [91m                           ~~~~~~~~~~~~~~[0m
+:ipundefined

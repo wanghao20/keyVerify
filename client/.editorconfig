@@ -1,0 +1,35 @@
+# http://editorconfig.org
+
+# 最顶层的EditorConfig文件
+root = true
+
+# Unix风格的换行符，换行符以每个文件结尾
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# js（x），ts（x）和vue文件的缩进覆盖
+[*.{js,jsx,ts,tsx,vue}]
+indent_size = 4
+indent_style = space
+
+# CSS相关文件的缩进覆盖
+[*.{css,styl,scss,less,sass}]
+indent_size = 4
+indent_style = space
+
+# html文件的缩进覆盖
+[*.html]
+indent_size = 4
+indent_style = space
+
+# 降价文件的尾随空间覆盖
+[*.md]
+trim_trailing_whitespace = false
+
+# 配置文件的缩进覆盖
+[*.{json,yml}]
+indent_size = 4
+indent_style = space

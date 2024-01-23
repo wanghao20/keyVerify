@@ -1,0 +1,8 @@
+[2022-09-07 14:33:34] [ERROR] [error] - init error:TSError: ⨯ Unable to compile TypeScript:
+[96msrc/service/PhoneService.ts[0m:[93m8[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'Data' is declared but its value is never read.
+
+[7m8[0m import { Data } from "node-rsa";
+[7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+:ipundefined
+[2022-09-07 14:34:06] [ERROR] [error] - The comparison function must be either a function or undefined:ip::ffff:192.168.10.107
+[2022-09-07 14:35:22] [ERROR] [error] - The comparison function must be either a function or undefined:ip::ffff:192.168.10.107

@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // import的相对起始路径
+    "outDir": "./dist", // 构建输出目录
+    // "target": "esnext",// node 环境支持 esnext
+    "allowSyntheticDefaultImports": true,
+    "sourceMap":false,     //用于debug   
+    "module": "commonjs",  //指定模块代码生成:“none”、“commonjs”、“amd”、“system”、“umd”、“es2015”或“esnext”。
+		"target": "es6",  //指定ECMAScript目标版本。许可值为“es3”、“es5”、“es6”、“es2015”、“es2016”、“es2017”、“es2018”或“esnext”。
+		"lib": ["es6"],  //指定要包含在编译中的库文件。需要TypeScript 2.0或更高版本
+    "importHelpers": true,
+    "strict": false,
+    "moduleResolution": "node",
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    // "suppressImplicitAnyIndexErrors": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": false,
+    "experimentalDecorators": true, // 开启装饰器的使用
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "paths": {
+      "@/*": [ "src/*" ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

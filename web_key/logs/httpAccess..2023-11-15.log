@@ -1,0 +1,15 @@
+[2023-11-15 12:59:23] [INFO] [http] - GET /auth/captchaCode?time=1700024363603 200 ::ffff:127.0.0.1- 11ms
+[2023-11-15 12:59:30] [WARN] [http] - POST /auth/login 403 ::ffff:127.0.0.1- 2ms
+[2023-11-15 12:59:30] [INFO] [http] - GET /auth/captchaCode?time=1700024370449 200 ::ffff:127.0.0.1- 3ms
+[2023-11-15 12:59:35] [WARN] [http] - POST /auth/login 403 ::ffff:127.0.0.1- 3ms
+[2023-11-15 12:59:35] [INFO] [http] - GET /auth/captchaCode?time=1700024375586 200 ::ffff:127.0.0.1- 3ms
+[2023-11-15 12:59:40] [WARN] [http] - POST /auth/login 403 ::ffff:127.0.0.1- 2ms
+[2023-11-15 12:59:40] [INFO] [http] - GET /auth/captchaCode?time=1700024380545 200 ::ffff:127.0.0.1- 3ms
+[2023-11-15 13:00:22] [WARN] [http] - POST /auth/login 403 ::ffff:127.0.0.1- 6ms
+[2023-11-15 13:00:22] [INFO] [http] - GET /auth/captchaCode?time=1700024422934 200 ::ffff:127.0.0.1- 5ms
+[2023-11-15 13:00:30] [INFO] [http] - POST /auth/login 200 ::ffff:127.0.0.1- 3ms
+[2023-11-15 13:00:30] [INFO] [http] - POST /auth/info 200 ::ffff:127.0.0.1- 2ms
+[2023-11-15 13:00:30] [INFO] [http] - GET /common/download/mv9a7hyk8l.jpg 200 ::ffff:127.0.0.1- 1ms
+[2023-11-15 13:00:30] [INFO] [http] - GET /game/game?page=1&limit=200&condition=%7B%22ip%22:%22%22,%22isBind%22:%22%22,%22grouping%22:%22%22%7D 200 ::ffff:127.0.0.1- 2ms
+[2023-11-15 13:00:36] [INFO] [http] - GET /auth/user?page=1&limit=10&condition=%7B%22name%22:%22%22,%22roles%22:%22%22%7D 200 ::ffff:127.0.0.1- 1ms
+[2023-11-15 13:00:37] [INFO] [http] - GET /game/game?page=1&limit=200&condition=%7B%22ip%22:%22%22,%22isBind%22:%22%22,%22grouping%22:%22%22%7D 200 ::ffff:127.0.0.1- 1ms

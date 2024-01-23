@@ -1,0 +1,648 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "overwrite": true,
+      "signed": true,
+      "autoCommit": true,
+      "encode": "<Function encode>",
+      "decode": "<Function decode>",
+      "genid": "<Function v4>"
+    },
+    "security": {
+      "domainWhiteList": [
+        "/auth/login",
+        "/auth/insert",
+        "/auth/captchacode",
+        "/auth/getemailcode",
+        "/auth/validemailcode",
+        "/favicon.ico",
+        "/common/download"
+      ],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": false,
+        "type": "ctoken",
+        "ignoreJSON": true,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "refererWhiteList": []
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN",
+        "matching": "<Function anonymous>"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "methodnoallow": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "noopen": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "nosniff": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block",
+        "matching": "<Function anonymous>"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-session\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-security\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-jsonp\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-onerror\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-i18n\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-watcher\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-schedule\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-multipart\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-development\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-logrotator\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-static\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-view\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-jwt\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-cors\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-redis\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-ts-typeorm\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\locales",
+        "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\config\\locales"
+      ],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieDomain": "",
+      "cookieMaxAge": "1y",
+      "functionName": "__"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+      }
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "egg-schedule.log"
+      }
+    },
+    "schedule": {
+      "directory": []
+    },
+    "multipart": {
+      "mode": "stream",
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": 102400,
+      "fields": 10,
+      "fileSize": 10485760,
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null,
+      "tmpdir": "C:\\Users\\ADMINI\\x7e1\\AppData\\Local\\Temp\\egg-multipart-tmp\\egg",
+      "cleanSchedule": {
+        "cron": "0 30 4 * * *"
+      }
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false,
+      "overrideIgnore": false
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\app\\public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000
+    },
+    "view": {
+      "root": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\app\\view",
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "jwt": {
+      "secret": "<String len: 16>",
+      "enable": false
+    },
+    "cors": {
+      "origin": "*",
+      "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
+    },
+    "redis": {
+      "default": {},
+      "app": true,
+      "agent": false,
+      "supportTimeCommand": true,
+      "clients": {
+        "db1": {
+          "port": 6379,
+          "host": "127.0.0.1",
+          "password": "<String len: 6>",
+          "db": 1
+        },
+        "db2": {
+          "port": 6379,
+          "host": "127.0.0.1",
+          "password": "<String len: 6>",
+          "db": 2
+        }
+      }
+    },
+    "env": "local",
+    "name": "egg",
+    "keys": "<String len: 22>",
+    "cookies": {},
+    "proxy": false,
+    "maxIpsCount": 0,
+    "maxProxyCount": 0,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "egg",
+      "version": "1.0.0",
+      "description": "",
+      "private": true,
+      "egg": {
+        "typescript": true,
+        "declarations": true
+      },
+      "scripts": {
+        "stop": "egg-scripts stop --title=egg-server-egg",
+        "start": "egg-bin dev",
+        "debug": "egg-bin debug",
+        "test-local": "egg-bin test",
+        "test": "npm run lint -- --fix && npm run test-local",
+        "cov": "egg-bin cov",
+        "tsc": "ets && tsc -p tsconfig.json",
+        "ci": "npm run lint && npm run cov && npm run tsc",
+        "autod": "autod",
+        "lint": "eslint . --ext .ts",
+        "clean": "ets clean"
+      },
+      "dependencies": {
+        "@hapi/joi": "^17.1.1",
+        "@types/nodemailer": "^6.4.0",
+        "bull": "^3.18.0",
+        "egg": "^2.6.1",
+        "egg-cors": "^2.2.3",
+        "egg-jwt": "^3.1.7",
+        "egg-redis": "^2.4.0",
+        "egg-router-util": "^1.1.14",
+        "egg-scripts": "^2.6.0",
+        "egg-ts-typeorm": "^1.1.12",
+        "joi": "^17.2.1",
+        "jsonwebtoken": "^8.5.1",
+        "koa-body": "^4.2.0",
+        "koa-ratelimit": "^4.2.1",
+        "mongo": "^0.1.0",
+        "mysql": "^2.18.1",
+        "nodemailer": "^6.4.11",
+        "svg-captcha": "^1.4.0"
+      },
+      "devDependencies": {
+        "@types/mocha": "^2.2.40",
+        "@types/node": "^7.0.12",
+        "@types/supertest": "^2.0.0",
+        "autod": "^3.0.1",
+        "autod-egg": "^1.1.0",
+        "egg-bin": "^4.11.0",
+        "egg-ci": "^1.8.0",
+        "egg-mock": "^3.16.0",
+        "eslint": "^6.7.2",
+        "eslint-config-egg": "^8.0.0",
+        "tslib": "^1.9.0",
+        "typescript": "^3.0.0"
+      },
+      "engines": {
+        "node": ">=8.9.0"
+      },
+      "ci": {
+        "version": "8"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "eslintIgnore": [
+        "coverage"
+      ],
+      "author": "",
+      "license": "MIT"
+    },
+    "baseDir": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server",
+    "HOME": "C:\\Users\\Administrator",
+    "rundir": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "1mb",
+      "jsonLimit": "1mb",
+      "textLimit": "1mb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "returnRawBody": true
+    },
+    "logger": {
+      "dir": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\logs\\egg",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "egg-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": false,
+      "type": "application"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheLookupInterval": 10000,
+      "dnsCacheMaxLength": 1000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "cors",
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "securities",
+      "i18n",
+      "eggLoaderTrace"
+    ],
+    "workerStartTimeout": 600000,
+    "serverTimeout": null,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 9090,
+        "hostname": "192.168.12.245"
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "middleware": [
+      "jwt",
+      "baseMiddleware"
+    ],
+    "typeorm": {
+      "clients": [
+        {
+          "name": "mysql",
+          "type": "mysql",
+          "host": "148.70.34.67",
+          "port": 3307,
+          "username": "root",
+          "password": "123456",
+          "database": "test",
+          "logging": false,
+          "timezone": "+08:00",
+          "dateStrings": true,
+          "entities": [
+            "app/entity/mysql/*/*.ts"
+          ]
+        },
+        {
+          "name": "mongodb",
+          "type": "mongodb",
+          "host": "148.70.34.67",
+          "port": 27017,
+          "database": "test",
+          "entities": [
+            "app/entity/mongo/*.ts"
+          ]
+        }
+      ]
+    },
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware",
+    "multipartParseOptions": {
+      "autoFields": false,
+      "defCharset": "utf8",
+      "limits": {
+        "fieldNameSize": 100,
+        "fieldSize": 102400,
+        "fields": 10,
+        "fileSize": 10485760,
+        "files": 10
+      },
+      "checkFile": "<Function checkFile>"
+    }
+  },
+  "plugins": {
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-session",
+      "version": "3.2.0"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-security",
+      "version": "2.8.0"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-jsonp",
+      "version": "2.0.0"
+    },
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-onerror",
+      "version": "2.1.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-i18n",
+      "version": "2.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-watcher",
+      "version": "3.1.1"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-schedule",
+      "version": "3.6.5"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [
+        "schedule"
+      ],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-multipart",
+      "version": "2.10.3"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-development",
+      "version": "2.7.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-logrotator",
+      "version": "3.1.0"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-static",
+      "version": "2.2.0"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-view",
+      "version": "2.1.2"
+    },
+    "jwt": {
+      "enable": true,
+      "package": "egg-jwt",
+      "name": "jwt",
+      "dependencies": [],
+      "optionalDependencies": [
+        "onerror"
+      ],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\config\\plugin.ts",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-jwt",
+      "version": "3.1.7"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\config\\plugin.ts",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-cors",
+      "version": "2.2.3"
+    },
+    "redis": {
+      "enable": true,
+      "package": "egg-redis",
+      "name": "redis",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\config\\plugin.ts",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-redis",
+      "version": "2.4.0"
+    },
+    "typeorm": {
+      "enable": true,
+      "package": "egg-ts-typeorm",
+      "name": "typeorm",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\config\\plugin.ts",
+      "path": "C:\\Users\\Administrator\\Desktop\\MyProject\\RecentProjects\\ums\\dfs-ums-server\\node_modules\\egg-ts-typeorm",
+      "version": "1.1.12"
+    }
+  }
+}

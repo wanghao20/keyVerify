@@ -1,0 +1,61 @@
+{
+	// 这里填入你的项目需要的个性化配置，比如：
+	"rules": {
+		"member-access": true, // 必须设置类的成员的可访问性
+		"no-any": false, // 禁止使用 any
+		"no-inferrable-types": true, //禁止给一个初始化时直接赋值为 number, string 或 boolean 的变量显式的指定类型
+		"no-internal-module": true, //禁止使用 module 来定义命名空间
+		"only-arrow-functions": false, //必须使用箭头函数，除非是单独的函数声明或是命名函数
+		"curly": true, //if 后面必须有 {，除非是单行 if
+		"label-position": true, //只允许在 do, for, while 或 switch 中使用 label
+		"no-duplicate-variable": true, //禁止出现重复的变量定义或函数参数名
+		"no-empty": true, //禁止出现空代码块，允许 catch 是空代码块
+		"no-return-await": true, //禁止没必要的 return await
+		"no-var-keyword": true, //禁止使用 var
+		"prefer-conditional-expression": true, //可以用三元表达式时，就不用 if else
+		"strict-boolean-expressions": false, //在分支条件判断中必须传入布尔类型的值
+		"cyclomatic-complexity": true, //	禁止函数的循环复杂度超过 20，详见 https://en.wikipedia.org/wiki/Cyclomatic_complexity
+		"eofline": true, //文件最后一行必须有一个空行
+		"indent": true, //一个缩进必须用四个空格替代
+		"prefer-const": true, //申明后不再被修改的变量必须使用 const 来申明
+		"prefer-readonly": true, //如果私有变量只在构造函数中被赋值，则必须使用 readonly 修饰符
+		"align": true, //变量定义需要竖向对其
+		"array-type": false, //限制必须使用 T[] 或 Array<T> 之中的一种来定义数组的类型
+		"arrow-parens": true, //箭头函数的参数必须有小括号
+		"binary-expression-operand-order": true, //数字字面量必须在加号的右边，即禁止 1 + x
+		"class-name": true, //类名与接口名必须为驼峰式
+		"completed-docs": true, //类、函数等必须写注释
+		"import-spacing": true, //import 语句中，关键字之间的间距必须是一个空格
+		"new-parens": true, //new 后面只必须有一个空格
+		"newline-before-return": true, //return 语句前必须有空行
+		"no-boolean-literal-compare": true, //禁止变量与 true 或 false 比较
+		"no-consecutive-blank-lines": true, //禁止连续超过三行空行
+		"no-trailing-whitespace": true, //禁止行尾有空格
+		"object-literal-key-quotes": true, //对象的 key 必须用引号包起来
+		"ordered-imports": false, //import 必须排序
+		"prefer-template": false, //必须使用模版字符串而不是字符串连接
+		"space-before-function-paren": false, //函数名前必须有空格
+		"space-within-parens": true, //	括号内首尾禁止有空格
+		"type-literal-delimiter": true, //字面类型的每个成员都必须有分号
+		"variable-name": true, //限制变量命名规则
+		// 强制单行注释格式：'//' 后必跟空格
+		"comment-format": [true, "check-space"],
+		// 要求 class 内成员的声明顺序，不能乱放，静态属性，实例属性，静态方法，实例方法
+		"member-ordering": [
+			true,
+			{
+				"order": ["static-field", "instance-field", "static-method", "instance-method"]
+			}
+		],
+		// 每个声明后强制 ;
+		"semicolon": true,
+		// 强制用 === 替换 ==
+		"triple-equals": [true, "allow-null-check"],
+                // 字符串字面量需要使用 单引号 包裹
+                "quotemark": [true, "double"]
+	},
+	// 不需要验证的文件夹
+	"linterOptions": {
+		"exclude": ["node_modules", "bin/*"]
+	}
+}

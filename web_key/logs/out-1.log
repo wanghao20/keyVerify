@@ -1,0 +1,75 @@
+2021-11-08 21:56:13: {
+  port: 10001,
+  password: 'Wh2319512282',
+  host: '152.136.235.96',
+  connectTimeout: 10000,
+  db: 6
+}
+2021-11-08 21:56:14: 服务器开启成功!9092
+2021-11-08 21:56:14: redis连接成功!
+2021-11-16 22:48:40: {
+  port: 6379,
+  password: 'Wh2319512282',
+  host: '49.233.34.66',
+  connectTimeout: 10000,
+  db: 3
+}
+2021-11-16 22:48:41: 服务器开启成功!9091
+2021-11-16 22:48:41: redis连接成功!
+2021-11-16 22:48:54: {
+  port: 6379,
+  password: 'Wh2319512282',
+  host: '49.233.34.66',
+  connectTimeout: 10000,
+  db: 3
+}
+2021-11-16 22:48:55: ../web_key/web/src/controllers/game/PhoneController.ts(29,53): error TS2345: Argument of type 'Context' is not assignable to parameter of type 'number'.
+../web_key/web/src/controllers/game/PhoneController.ts(63,60): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Context'.
+
+2021-11-16 22:48:55: redis连接成功!
+2021-11-16 22:48:55: 服务器开启成功!9091
+2021-11-16 22:49:08: {
+  port: 6379,
+  password: 'Wh2319512282',
+  host: '49.233.34.66',
+  connectTimeout: 10000,
+  db: 3
+}
+2021-11-16 22:49:09: redis连接成功!
+2021-11-16 22:49:09: 服务器开启成功!9091
+2022-03-15 11:56:48: {
+  port: 6379,
+  password: 'Wh2319512282',
+  host: '49.233.34.66',
+  connectTimeout: 10000,
+  db: 3
+}
+2022-03-15 11:56:49: redis连接成功!
+2022-03-15 11:56:49: 服务器开启成功!9091
+2022-03-15 16:52:11: {
+  port: 6379,
+  password: 'Wh2319512282',
+  host: '49.233.34.66',
+  connectTimeout: 10000,
+  db: 3
+}
+2022-03-15 16:52:12: redis连接成功!
+2022-03-15 16:52:12: 服务器开启成功!9091
+2022-05-07 11:30:25: {
+  port: 6379,
+  password: 'Wh2319512282',
+  host: '49.233.34.66',
+  connectTimeout: 10000,
+  db: 3
+}
+2022-05-07 11:30:26: 服务器开启成功!9091
+2022-05-07 11:30:26: redis连接成功!
+2022-05-24 00:32:40: {
+  port: 6379,
+  password: 'Wh2319512282',
+  host: '49.233.34.66',
+  connectTimeout: 10000,
+  db: 3
+}
+2022-05-24 00:32:41: redis连接成功!
+2022-05-24 00:32:41: 服务器开启成功!9091
