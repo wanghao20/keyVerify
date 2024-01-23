@@ -1,6 +1,6 @@
 # key-server
 ## 项目截图
-![Image text](https://github.com/wanghao20/keyVerify/tree/main/img/0.png)
+![Image text](https://github.com/wanghao20/keyVerify/blob/master/img/0.png)
 
 ## 前序准备
 
